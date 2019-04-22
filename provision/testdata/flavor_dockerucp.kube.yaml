@@ -33,12 +33,12 @@ data:
         "aci-vrf": "ucp",
         "default-endpoint-group": {
             "policy-space": "ucp",
-            "name": "dockerucp|kube-default"
+            "name": "dockerucp|containers-default"
         },
         "namespace-default-endpoint-group": {
             "kube-system": {
                 "policy-space": "ucp",
-                "name": "dockerucp|kube-system"
+                "name": "dockerucp|containers-system"
             }
         },
         "service-ip-pool": [
@@ -96,12 +96,12 @@ data:
         ],
         "default-endpoint-group": {
             "policy-space": "ucp",
-            "name": "dockerucp|kube-default"
+            "name": "dockerucp|containers-default"
         },
         "namespace-default-endpoint-group": {
             "kube-system": {
                 "policy-space": "ucp",
-                "name": "dockerucp|kube-system"
+                "name": "dockerucp|containers-system"
             }
         }
     }

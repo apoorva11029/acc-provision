@@ -221,7 +221,7 @@
                         {
                             "infraRsFuncToEpg": {
                                 "attributes": {
-                                    "tDn": "uni/tn-kube/ap-kubernetes/epg-kube-nodes",
+                                    "tDn": "uni/tn-kube/ap-containers/epg-containers-nodes",
                                     "encap": "vlan-4001"
                                 }
                             }
@@ -236,7 +236,7 @@
 None
 /api/mo/uni/infra/attentp-kube-aep/rsdomP-[uni/phys-kube-pdom].json
 None
-/api/mo/uni/infra/attentp-kube-aep/gen-default/rsfuncToEpg-[uni/tn-kube/ap-kubernetes/epg-kube-nodes].json
+/api/mo/uni/infra/attentp-kube-aep/gen-default/rsfuncToEpg-[uni/tn-kube/ap-containers/epg-containers-nodes].json
 None
 /api/mo/uni/infra.json
 {
@@ -316,13 +316,13 @@ None
             {
                 "fvAp": {
                     "attributes": {
-                        "name": "kubernetes"
+                        "name": "containers"
                     },
                     "children": [
                         {
                             "fvAEPg": {
                                 "attributes": {
-                                    "name": "kube-default"
+                                    "name": "containers-default"
                                 },
                                 "children": [
                                     {
@@ -363,7 +363,7 @@ None
                                     {
                                         "fvRsBd": {
                                             "attributes": {
-                                                "tnFvBDName": "kube-pod-bd"
+                                                "tnFvBDName": "containers-pod-bd"
                                             }
                                         }
                                     }
@@ -373,7 +373,7 @@ None
                         {
                             "fvAEPg": {
                                 "attributes": {
-                                    "name": "kube-system"
+                                    "name": "containers-system"
                                 },
                                 "children": [
                                     {
@@ -407,7 +407,7 @@ None
                                     {
                                         "fvRsCons": {
                                             "attributes": {
-                                                "tnVzBrCPName": "kube-api"
+                                                "tnVzBrCPName": "containers-api"
                                             }
                                         }
                                     },
@@ -428,7 +428,7 @@ None
                                     {
                                         "fvRsBd": {
                                             "attributes": {
-                                                "tnFvBDName": "kube-pod-bd"
+                                                "tnFvBDName": "containers-pod-bd"
                                             }
                                         }
                                     }
@@ -438,7 +438,7 @@ None
                         {
                             "fvAEPg": {
                                 "attributes": {
-                                    "name": "kube-nodes"
+                                    "name": "containers-nodes"
                                 },
                                 "children": [
                                     {
@@ -451,7 +451,7 @@ None
                                     {
                                         "fvRsProv": {
                                             "attributes": {
-                                                "tnVzBrCPName": "kube-api"
+                                                "tnVzBrCPName": "containers-api"
                                             }
                                         }
                                     },
@@ -487,7 +487,7 @@ None
                                     {
                                         "fvRsBd": {
                                             "attributes": {
-                                                "tnFvBDName": "kube-node-bd"
+                                                "tnFvBDName": "containers-node-bd"
                                             }
                                         }
                                     }
@@ -500,7 +500,7 @@ None
             {
                 "fvBD": {
                     "attributes": {
-                        "name": "kube-node-bd",
+                        "name": "containers-node-bd",
                         "arpFlood": "yes"
                     },
                     "children": [
@@ -532,7 +532,7 @@ None
             {
                 "fvBD": {
                     "attributes": {
-                        "name": "kube-pod-bd"
+                        "name": "containers-pod-bd"
                     },
                     "children": [
                         {
@@ -655,13 +655,13 @@ None
             {
                 "vzFilter": {
                     "attributes": {
-                        "name": "kube-api-filter"
+                        "name": "containers-api-filter"
                     },
                     "children": [
                         {
                             "vzEntry": {
                                 "attributes": {
-                                    "name": "kube-api",
+                                    "name": "containers-api",
                                     "etherT": "ip",
                                     "prot": "tcp",
                                     "dFromPort": "6443",
@@ -674,7 +674,7 @@ None
                         {
                             "vzEntry": {
                                 "attributes": {
-                                    "name": "kube-api2",
+                                    "name": "containers-api2",
                                     "etherT": "ip",
                                     "prot": "tcp",
                                     "dFromPort": "8443",
@@ -690,13 +690,13 @@ None
             {
                 "vzBrCP": {
                     "attributes": {
-                        "name": "kube-api"
+                        "name": "containers-api"
                     },
                     "children": [
                         {
                             "vzSubj": {
                                 "attributes": {
-                                    "name": "kube-api-subj",
+                                    "name": "containers-api-subj",
                                     "consMatchT": "AtleastOne",
                                     "provMatchT": "AtleastOne"
                                 },
@@ -704,7 +704,7 @@ None
                                     {
                                         "vzRsSubjFiltAtt": {
                                             "attributes": {
-                                                "tnVzFilterName": "kube-api-filter"
+                                                "tnVzFilterName": "containers-api-filter"
                                             }
                                         }
                                     }

@@ -43,12 +43,12 @@ data:
         "aci-vrf": "os",
         "default-endpoint-group": {
             "policy-space": "os",
-            "name": "openshift|kube-default"
+            "name": "openshift|containers-default"
         },
         "namespace-default-endpoint-group": {
             "aci-containers-system": {
                 "policy-space": "os",
-                "name": "openshift|kube-system"
+                "name": "openshift|containers-system"
             }
         },
         "service-ip-pool": [
@@ -107,12 +107,12 @@ data:
         ],
         "default-endpoint-group": {
             "policy-space": "os",
-            "name": "openshift|kube-default"
+            "name": "openshift|containers-default"
         },
         "namespace-default-endpoint-group": {
             "aci-containers-system": {
                 "policy-space": "os",
-                "name": "openshift|kube-system"
+                "name": "openshift|containers-system"
             }
         }
     }

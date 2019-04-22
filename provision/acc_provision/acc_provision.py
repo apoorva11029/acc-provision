@@ -296,13 +296,13 @@ def config_adjust(args, config, prov_apic, no_random):
             "default_endpoint_group": {
                 "tenant": tenant,
                 "app_profile": app_profile,
-                "group": "kube-default",
+                "group": "containers-default",
             },
             "namespace_default_endpoint_group": {
                 system_namespace: {
                     "tenant": tenant,
                     "app_profile": app_profile,
-                    "group": "kube-system",
+                    "group": "containers-system",
                 },
             },
             "pod_ip_pool": [

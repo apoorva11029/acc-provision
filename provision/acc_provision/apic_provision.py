@@ -1041,7 +1041,7 @@ class ApicKubeConfig(object):
                                                                         [
                                                                             (
                                                                                 "tDn",
-                                                                                "uni/tn-%s/ap-kubernetes/epg-kube-nodes"
+                                                                                "uni/tn-%s/ap-containers/epg-containers-nodes"
                                                                                 % (
                                                                                     tn_name,
                                                                                 ),
@@ -1107,7 +1107,7 @@ class ApicKubeConfig(object):
         else:
             rsfun = (
                 base + "/gen-default/rsfuncToEpg-"
-                "[uni/tn-%s/ap-kubernetes/epg-kube-nodes].json" % (tn_name)
+                "[uni/tn-%s/ap-containers/epg-containers-nodes].json" % (tn_name)
             )
             return path, data, rsvmm, rsphy, rsfun
 
@@ -1612,7 +1612,7 @@ class ApicKubeConfig(object):
                                 (
                                     "attributes",
                                     collections.OrderedDict(
-                                        [("tnFvBDName", "kube-pod-bd")]
+                                        [("tnFvBDName", "containers-pod-bd")]
                                     ),
                                 )
                             ]
@@ -1633,7 +1633,7 @@ class ApicKubeConfig(object):
                                     (
                                         "attributes",
                                         collections.OrderedDict(
-                                            [("tnVzBrCPName", "kube-api")]
+                                            [("tnVzBrCPName", "containers-api")]
                                         ),
                                     )
                                 ]
@@ -1669,7 +1669,7 @@ class ApicKubeConfig(object):
                                     (
                                         "attributes",
                                         collections.OrderedDict(
-                                            [("tnNdPfxPolName", "kube-nd-ra-policy")]
+                                            [("tnNdPfxPolName", "containers-nd-ra-policy")]
                                         ),
                                     )
                                 ]
@@ -1708,7 +1708,7 @@ class ApicKubeConfig(object):
                                                         (
                                                             "attributes",
                                                             collections.OrderedDict(
-                                                                [("name", "kubernetes")]
+                                                                [("name", "containers")]
                                                             ),
                                                         ),
                                                         (
@@ -1726,7 +1726,7 @@ class ApicKubeConfig(object):
                                                                                             [
                                                                                                 (
                                                                                                     "name",
-                                                                                                    "kube-default",
+                                                                                                    "containers-default",
                                                                                                 )
                                                                                             ]
                                                                                         ),
@@ -1752,7 +1752,7 @@ class ApicKubeConfig(object):
                                                                                             [
                                                                                                 (
                                                                                                     "name",
-                                                                                                    "kube-system",
+                                                                                                    "containers-system",
                                                                                                 )
                                                                                             ]
                                                                                         ),
@@ -1860,7 +1860,7 @@ class ApicKubeConfig(object):
                                                                                                                         [
                                                                                                                             (
                                                                                                                                 "tnVzBrCPName",
-                                                                                                                                "kube-api",
+                                                                                                                                "containers-api",
                                                                                                                             )
                                                                                                                         ]
                                                                                                                     ),
@@ -1931,7 +1931,7 @@ class ApicKubeConfig(object):
                                                                                                                         [
                                                                                                                             (
                                                                                                                                 "tnFvBDName",
-                                                                                                                                "kube-pod-bd",
+                                                                                                                                "containers-pod-bd",
                                                                                                                             )
                                                                                                                         ]
                                                                                                                     ),
@@ -1960,7 +1960,7 @@ class ApicKubeConfig(object):
                                                                                             [
                                                                                                 (
                                                                                                     "name",
-                                                                                                    "kube-nodes",
+                                                                                                    "containers-nodes",
                                                                                                 )
                                                                                             ]
                                                                                         ),
@@ -2002,7 +2002,7 @@ class ApicKubeConfig(object):
                                                                                                                         [
                                                                                                                             (
                                                                                                                                 "tnVzBrCPName",
-                                                                                                                                "kube-api",
+                                                                                                                                "containers-api",
                                                                                                                             )
                                                                                                                         ]
                                                                                                                     ),
@@ -2119,7 +2119,7 @@ class ApicKubeConfig(object):
                                                                                                                         [
                                                                                                                             (
                                                                                                                                 "tnFvBDName",
-                                                                                                                                "kube-node-bd",
+                                                                                                                                "containers-node-bd",
                                                                                                                             )
                                                                                                                         ]
                                                                                                                     ),
@@ -2155,7 +2155,7 @@ class ApicKubeConfig(object):
                                                                 [
                                                                     (
                                                                         "name",
-                                                                        "kube-node-bd",
+                                                                        "containers-node-bd",
                                                                     ),
                                                                     (
                                                                         "arpFlood",
@@ -2238,7 +2238,7 @@ class ApicKubeConfig(object):
                                                                 [
                                                                     (
                                                                         "name",
-                                                                        "kube-pod-bd",
+                                                                        "containers-pod-bd",
                                                                     )
                                                                 ]
                                                             ),
@@ -2640,7 +2640,7 @@ class ApicKubeConfig(object):
                                                                 [
                                                                     (
                                                                         "name",
-                                                                        "kube-api-filter",
+                                                                        "containers-api-filter",
                                                                     )
                                                                 ]
                                                             ),
@@ -2660,7 +2660,7 @@ class ApicKubeConfig(object):
                                                                                             [
                                                                                                 (
                                                                                                     "name",
-                                                                                                    "kube-api",
+                                                                                                    "containers-api",
                                                                                                 ),
                                                                                                 (
                                                                                                     "etherT",
@@ -2706,7 +2706,7 @@ class ApicKubeConfig(object):
                                                                                             [
                                                                                                 (
                                                                                                     "name",
-                                                                                                    "kube-api2",
+                                                                                                    "containers-api2",
                                                                                                 ),
                                                                                                 (
                                                                                                     "etherT",
@@ -2756,7 +2756,7 @@ class ApicKubeConfig(object):
                                                         (
                                                             "attributes",
                                                             collections.OrderedDict(
-                                                                [("name", "kube-api")]
+                                                                [("name", "containers-api")]
                                                             ),
                                                         ),
                                                         (
@@ -2774,7 +2774,7 @@ class ApicKubeConfig(object):
                                                                                             [
                                                                                                 (
                                                                                                     "name",
-                                                                                                    "kube-api-subj",
+                                                                                                    "containers-api-subj",
                                                                                                 ),
                                                                                                 (
                                                                                                     "consMatchT",
@@ -2802,7 +2802,7 @@ class ApicKubeConfig(object):
                                                                                                                         [
                                                                                                                             (
                                                                                                                                 "tnVzFilterName",
-                                                                                                                                "kube-api-filter",
+                                                                                                                                "containers-api-filter",
                                                                                                                             )
                                                                                                                         ]
                                                                                                                     ),
@@ -3173,7 +3173,7 @@ class ApicKubeConfig(object):
                                             [
                                                 ("ctrl", "on-link,router-address"),
                                                 ("lifetime", "2592000"),
-                                                ("name", "kube-nd-ra-policy"),
+                                                ("name", "containers-nd-ra-policy"),
                                                 ("prefLifetime", "604800"),
                                             ]
                                         ),
@@ -3185,7 +3185,7 @@ class ApicKubeConfig(object):
                 )
             )
 
-        # If dhcp_relay_label is present, attach the label to the kube-node-bd
+        # If dhcp_relay_label is present, attach the label to the containers-node-bd
         if "dhcp_relay_label" in self.config["aci_config"]:
             dbg("Handle DHCP Relay Label")
             children = data["fvTenant"]["children"]
@@ -3207,10 +3207,10 @@ class ApicKubeConfig(object):
                     )
                 ]
             )
-            # lookup kube-node-bd data
+            # lookup containers-node-bd data
             for child in children:
                 if "fvBD" in child:
-                    if child["fvBD"]["attributes"]["name"] == "kube-node-bd":
+                    if child["fvBD"]["attributes"]["name"] == "containers-node-bd":
                         child["fvBD"]["children"].append(attr)
                         break
 
@@ -3417,7 +3417,7 @@ class ApicKubeConfig(object):
 def openshift_flavor_specific_handling(data, items):
     if items is None or len(items) == 0:
         err("Error in getting items for flavor")
-    # kube-systems needs to provide kube-api contract
+    # kube-systems needs to provide containers-api contract
     provide_kube_api_contract_os = collections.OrderedDict(
         [
             (
@@ -3430,7 +3430,7 @@ def openshift_flavor_specific_handling(data, items):
                                 [
                                     (
                                         "tnVzBrCPName",
-                                        "kube-api",
+                                        "containers-api",
                                     )
                                 ]
                             ),
@@ -3515,19 +3515,19 @@ def openshift_flavor_specific_handling(data, items):
             ]
         )
 
-        # 0 = kube-default, 1 = kube-system, 2 = kube-nodes
-        if 'kube-default' in item['consumed']:
+        # 0 = containers-default, 1 = containers-system, 2 = containers-nodes
+        if 'containers-default' in item['consumed']:
             data['fvTenant']['children'][0]['fvAp']['children'][0]['fvAEPg']['children'].append(consume_os_contract)
-        if 'kube-system' in item['consumed']:
+        if 'containers-system' in item['consumed']:
             data['fvTenant']['children'][0]['fvAp']['children'][1]['fvAEPg']['children'].append(consume_os_contract)
-        if 'kube-nodes' in item['consumed']:
+        if 'containers-nodes' in item['consumed']:
             data['fvTenant']['children'][0]['fvAp']['children'][2]['fvAEPg']['children'].append(consume_os_contract)
 
-        if 'kube-default' in item['provided']:
+        if 'containers-default' in item['provided']:
             data['fvTenant']['children'][0]['fvAp']['children'][0]['fvAEPg']['children'].append(provide_os_contract)
-        if 'kube-system' in item['provided']:
+        if 'containers-system' in item['provided']:
             data['fvTenant']['children'][0]['fvAp']['children'][1]['fvAEPg']['children'].append(provide_os_contract)
-        if 'kube-nodes' in item['provided']:
+        if 'containers-nodes' in item['provided']:
             data['fvTenant']['children'][0]['fvAp']['children'][2]['fvAEPg']['children'].append(provide_os_contract)
 
     # add new contract and subject

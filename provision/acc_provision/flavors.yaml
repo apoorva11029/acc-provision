@@ -117,8 +117,8 @@ flavors:
             etherT: ip
             prot: tcp
             stateful: "no"
-            consumed: ["kube-system"]
-            provided: ["kube-nodes"]
+            consumed: ["containers-system"]
+            provided: ["containers-nodes"]
           - name: openshift-monitoring
             range:
               -
@@ -128,8 +128,8 @@ flavors:
             etherT: ip
             prot: tcp
             stateful: "no"
-            provided: ["kube-system","kube-default","kube-nodes"]
-            consumed: ["kube-system","kube-default"]
+            provided: ["containers-system","containers-default","containers-nodes"]
+            consumed: ["containers-system","containers-default"]
         vmm_domain:
           type: OpenShift
     status: null
@@ -156,8 +156,8 @@ flavors:
             etherT: ip
             prot: tcp
             stateful: "no"
-            consumed: ["kube-system"]
-            provided: ["kube-nodes"]
+            consumed: ["containers-system"]
+            provided: ["containers-nodes"]
           - name: openshift-monitoring
             range:
               -
@@ -167,8 +167,8 @@ flavors:
             etherT: ip
             prot: tcp
             stateful: "no"
-            provided: ["kube-system","kube-default","kube-nodes"]
-            consumed: ["kube-system","kube-default"]
+            provided: ["containers-system","containers-default","containers-nodes"]
+            consumed: ["containers-system","containers-default"]
         vmm_domain:
           type: OpenShift
     status: null
@@ -195,8 +195,8 @@ flavors:
             etherT: ip
             prot: tcp
             stateful: "no"
-            consumed: ["kube-system"]
-            provided: ["kube-nodes"]
+            consumed: ["containers-system"]
+            provided: ["containers-nodes"]
           - name: openshift-monitoring
             range:
               -
@@ -206,8 +206,8 @@ flavors:
             etherT: ip
             prot: tcp
             stateful: "no"
-            provided: ["kube-system","kube-default","kube-nodes"]
-            consumed: ["kube-system","kube-default"]
+            provided: ["containers-system","containers-default","containers-nodes"]
+            consumed: ["containers-system","containers-default"]
         vmm_domain:
           type: OpenShift
     status: null
@@ -253,8 +253,8 @@ flavors:
             etherT: ip
             prot: tcp
             stateful: "no"
-            consumed: ["kube-system"]
-            provided: ["kube-nodes"]
+            consumed: ["containers-system"]
+            provided: ["containers-nodes"]
           - name: openshift-monitoring
             range:
               -
@@ -264,8 +264,8 @@ flavors:
             etherT: ip
             prot: tcp
             stateful: "no"
-            provided: ["kube-system","kube-default","kube-nodes"]
-            consumed: ["kube-system","kube-default"]
+            provided: ["containers-system","containers-default","containers-nodes"]
+            consumed: ["containers-system","containers-default"]
         vmm_domain:
           type: OpenShift
     status: null

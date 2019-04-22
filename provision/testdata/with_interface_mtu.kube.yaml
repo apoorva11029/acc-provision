@@ -33,12 +33,12 @@ data:
         "aci-vrf": "kube",
         "default-endpoint-group": {
             "policy-space": "kube",
-            "name": "kubernetes|kube-default"
+            "name": "kubernetes|containers-default"
         },
         "namespace-default-endpoint-group": {
             "kube-system": {
                 "policy-space": "kube",
-                "name": "kubernetes|kube-system"
+                "name": "kubernetes|containers-system"
             }
         },
         "service-ip-pool": [
@@ -97,12 +97,12 @@ data:
         ],
         "default-endpoint-group": {
             "policy-space": "kube",
-            "name": "kubernetes|kube-default"
+            "name": "kubernetes|containers-default"
         },
         "namespace-default-endpoint-group": {
             "kube-system": {
                 "policy-space": "kube",
-                "name": "kubernetes|kube-system"
+                "name": "kubernetes|containers-system"
             }
         }
     }
