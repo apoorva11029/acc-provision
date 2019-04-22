@@ -13,16 +13,16 @@ data:
         "apic-hosts": [
             "10.30.120.100"
         ],
-        "apic-username": "kube",
+        "apic-username": "ucp",
         "apic-private-key-path": "/usr/local/etc/aci-cert/user.key",
         "apic-use-inst-tag": true,
-        "aci-prefix": "kube",
+        "aci-prefix": "ucp",
         "aci-vmm-type": "Kubernetes",
-        "aci-vmm-domain": "kube",
-        "aci-vmm-controller": "kube",
-        "aci-policy-tenant": "kube",
+        "aci-vmm-domain": "ucp",
+        "aci-vmm-controller": "ucp",
+        "aci-policy-tenant": "ucp",
         "require-netpol-annot": false,
-        "aci-service-phys-dom": "kube-pdom",
+        "aci-service-phys-dom": "ucp-pdom",
         "aci-service-encap": "vlan-4003",
         "aci-service-monitor-interval": 0,
         "aci-vrf-tenant": "common",
@@ -30,14 +30,14 @@ data:
         "aci-ext-networks": [
             "default"
         ],
-        "aci-vrf": "kube",
+        "aci-vrf": "ucp",
         "default-endpoint-group": {
-            "policy-space": "kube",
+            "policy-space": "ucp",
             "name": "dockerucp|kube-default"
         },
         "namespace-default-endpoint-group": {
             "kube-system": {
-                "policy-space": "kube",
+                "policy-space": "ucp",
                 "name": "dockerucp|kube-system"
             }
         },
@@ -74,10 +74,10 @@ data:
     {
         "log-level": "info",
         "aci-vmm-type": "Kubernetes",
-        "aci-vmm-domain": "kube",
-        "aci-vmm-controller": "kube",
-        "aci-prefix": "kube",
-        "aci-vrf": "kube",
+        "aci-vmm-domain": "ucp",
+        "aci-vmm-controller": "ucp",
+        "aci-prefix": "ucp",
+        "aci-vrf": "ucp",
         "aci-vrf-tenant": "common",
         "service-vlan": 4003,
         "encap-type": "vxlan",
@@ -95,12 +95,12 @@ data:
             }
         ],
         "default-endpoint-group": {
-            "policy-space": "kube",
+            "policy-space": "ucp",
             "name": "dockerucp|kube-default"
         },
         "namespace-default-endpoint-group": {
             "kube-system": {
-                "policy-space": "kube",
+                "policy-space": "ucp",
                 "name": "dockerucp|kube-system"
             }
         }
