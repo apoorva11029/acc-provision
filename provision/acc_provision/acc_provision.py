@@ -964,6 +964,15 @@ def provision(args, apic_file, no_random):
                 config["aci_config"]["app_profile"] = "dockerucp"
             else:
                 config["aci_config"]["app_profile"] = "kubernetes"
+        if "vmm_domain" in config["aci_config"] and "type" not in config["aci_config"]["vmm_domain"]:
+            if "openshift" in flavor:
+                config["aci_config"]["vmm_domain"]["type"] = "OpenShift"
+            elif "docker-ucp" in flavor:
+                config["aci_config"]["vmm_domain"]["type"] = "Dockerucp"
+            elif "cloudfoundry" in flavor:
+                config["aci_config"]["vmm_domain"]["type"] = "CloudFoundry"
+            else:
+                config["aci_config"]["vmm_domain"]["type"] = "Kubernetes"
         deep_merge(config, {"flavor": flavor})
         if "config" in FLAVORS[flavor]:
             deep_merge(config, FLAVORS[flavor]["config"])

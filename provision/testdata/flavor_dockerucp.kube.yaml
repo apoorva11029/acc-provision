@@ -17,7 +17,7 @@ data:
         "apic-private-key-path": "/usr/local/etc/aci-cert/user.key",
         "apic-use-inst-tag": true,
         "aci-prefix": "ucp",
-        "aci-vmm-type": "Kubernetes",
+        "aci-vmm-type": "Dockerucp",
         "aci-vmm-domain": "ucp",
         "aci-vmm-controller": "ucp",
         "aci-policy-tenant": "ucp",
@@ -73,7 +73,7 @@ data:
   host-agent-config: |-
     {
         "log-level": "info",
-        "aci-vmm-type": "Kubernetes",
+        "aci-vmm-type": "Dockerucp",
         "aci-vmm-domain": "ucp",
         "aci-vmm-controller": "ucp",
         "aci-prefix": "ucp",
