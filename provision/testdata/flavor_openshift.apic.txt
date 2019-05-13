@@ -151,7 +151,7 @@
                         {
                             "infraRsFuncToEpg": {
                                 "attributes": {
-                                    "tDn": "uni/tn-os/ap-containers/epg-containers-nodes",
+                                    "tDn": "uni/tn-os/ap-openshift/epg-containers-nodes",
                                     "encap": "vlan-4001"
                                 }
                             }
@@ -166,7 +166,7 @@
 None
 /api/mo/uni/infra/attentp-os-aep/rsdomP-[uni/phys-os-pdom].json
 None
-/api/mo/uni/infra/attentp-os-aep/gen-default/rsfuncToEpg-[uni/tn-os/ap-containers/epg-containers-nodes].json
+/api/mo/uni/infra/attentp-os-aep/gen-default/rsfuncToEpg-[uni/tn-os/ap-openshift/epg-containers-nodes].json
 None
 /api/mo/uni/infra.json
 {

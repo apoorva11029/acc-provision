@@ -865,6 +865,7 @@ class ApicKubeConfig(object):
         infra_vlan = self.config["net_config"]["infra_vlan"]
         tn_name = self.config["aci_config"]["cluster_tenant"]
         vmm_type = self.config["aci_config"]["vmm_domain"]["type"]
+        ap_name = (self.config["aci_config"]["app_profile"])
 
         path = "/api/mo/uni/infra.json"
         data = collections.OrderedDict(
@@ -1041,9 +1042,10 @@ class ApicKubeConfig(object):
                                                                         [
                                                                             (
                                                                                 "tDn",
-                                                                                "uni/tn-%s/ap-containers/epg-containers-nodes"
+                                                                                "uni/tn-%s/ap-%s/epg-containers-nodes"
                                                                                 % (
                                                                                     tn_name,
+                                                                                    ap_name,  
                                                                                 ),
                                                                             ),
                                                                             (
@@ -1107,7 +1109,7 @@ class ApicKubeConfig(object):
         else:
             rsfun = (
                 base + "/gen-default/rsfuncToEpg-"
-                "[uni/tn-%s/ap-containers/epg-containers-nodes].json" % (tn_name)
+                "[uni/tn-%s/ap-%s/epg-containers-nodes].json" % (tn_name, ap_name)
             )
             return path, data, rsvmm, rsphy, rsfun
 
