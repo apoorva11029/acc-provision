@@ -650,13 +650,11 @@ spec:
           effect: NoSchedule
       containers:
         - name: test_snat-operator
-          image: noiro/snat-operator:snat
+          image: noiro/snat-operator:latest-test
           imagePullPolicy: Always
           command:
           - snat-operator
           env:
-            - name: WATCH_NAMESPACE
-              value: "snat_namespace"
             - name: ACI_SNAT_NAMESPACE
               value: "snat_namespace"
             - name: ACI_SNAGLOBALINFO_NAME
